@@ -1,3 +1,46 @@
+/* ========================================================= */
+/* ESTILOS FIJOS DEL RELOJ Y LA FECHA (SUPERIOR IZQUIERDA) */
+/* ========================================================= */
+#dateDisplay, #clockDisplay {
+    position: fixed; /* Mantiene la posición fija al hacer scroll */
+    left: 10px;
+    
+    /* Fuente clásica acorde a la época */
+    font-family: 'Times New Roman', Times, serif; 
+    
+    /* Color de texto más oscuro */
+    color: #333333; 
+    
+    /* Fondo semi-transparente similar a tus secciones */
+    background-color: transparent; 
+    
+    padding: 5px 8px;
+    border-radius: 4px;
+    
+    /* Borde sutil, usando el color azul/napoleónico */
+    border: none;
+   
+
+    
+    box-shadow: none; /* Sombra suave para que resalte */
+    z-index: 1000;
+    text-align: center;
+}
+
+#dateDisplay {
+    top: 10px;      /* Arriba */
+    font-size: 14px; 
+    font-weight: bold;
+    letter-spacing: 1px; /* Espaciado extra para la fecha */
+}
+
+#clockDisplay {
+    top: 40px;      /* Abajo (separación de 30px del anterior) */
+    font-size: 18px; 
+    font-weight: bold;
+    color: #181625; /* Resaltar la hora con el color distintivo */
+}
+
 
 /* 1. Configuración base */
 body {
