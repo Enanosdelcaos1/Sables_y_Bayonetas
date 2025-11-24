@@ -1,111 +1,107 @@
-/* ========================================================= */
-/* ESTILOS FIJOS DEL RELOJ Y LA FECHA (SUPERIOR IZQUIERDA) */
-/* ========================================================= */
-#dateDisplay, #clockDisplay {
-    position: fixed; /* Mantiene la posición fija al hacer scroll */
+#dateDisplay,
+#clockDisplay {
+    position: absolute;
     left: 10px;
-    
-    /* Fuente clásica acorde a la época */
-    font-family: 'Times New Roman', Times, serif; 
-    
-    /* Color de texto más oscuro */
-    color: #333333; 
-    
-    /* Fondo semi-transparente similar a tus secciones */
-    background-color: transparent; 
-    
+    font-family: 'Times New Roman', Times, serif;
+    color: #333333;
+    background-color: transparent;
     padding: 5px 8px;
     border-radius: 4px;
-    
-    /* Borde sutil, usando el color azul/napoleónico */
     border: none;
-   
-
-    
-    box-shadow: none; /* Sombra suave para que resalte */
+    box-shadow: none;
     z-index: 1000;
     text-align: center;
 }
 
 #dateDisplay {
-    top: 10px;      /* Arriba */
-    font-size: 14px; 
+    top: 10px;
+    font-size: 14px;
     font-weight: bold;
-    letter-spacing: 1px; /* Espaciado extra para la fecha */
+    letter-spacing: 1px;
 }
 
 #clockDisplay {
-    top: 40px;      /* Abajo (separación de 30px del anterior) */
-    font-size: 18px; 
+    top: 40px;
+    font-size: 18px;
     font-weight: bold;
-    color: #181625; /* Resaltar la hora con el color distintivo */
+    color: #181625;
 }
 
 
-/* 1. Configuración base */
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Georgia', serif; /* Una fuente más acorde a la época */
+    font-family: 'Georgia', serif;
     min-height: 100vh;
     position: relative;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centra todo el contenido */
-    color: rgba(0, 0, 0, 0.958); /* Texto blanco para resaltar */
+    align-items: center;
+    color: rgba(0, 0, 0, 0.958);
 }
 
-/* 2. EL FONDO (IMAGEN) */
 body::before {
     content: "";
-    position: fixed; /* Fixed para que al bajar (scroll) el fondo no se acabe */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    
-    /* IMPORTANTE: '../' significa "sal de la carpeta css y busca el archivo" */
-    /* Si tu imagen es PNG, cambia .jpg por .png aquí abajo: */
-    background-image: url('../img/sable\ y\ bayoneta\ \ 2.png'); 
-    
-    background-size: 90% 90%; /* Que ocupe todo el fondo */
+    background-image: url('../img/sable\ y\ bayoneta\ \ 2.png');
+    background-size: 90% 90%;
     background-repeat: no-repeat;
     background-position: center;
-    filter: blur(5px); /* El desenfoque para que se lea el texto */
-    transform: scale(1.1); /* Para quitar bordes blancos */
-    z-index: -1; /* Se va al fondo */
+    filter: blur(5px);
+    transform: scale(1.1);
+    z-index: -1;
 }
 
-/* 3. CAJAS DE TEXTO (Para que se lea bien sobre la pintura) */
 .contenedor-texto {
-    background-color: rgba(0, 0, 0, 0.7); /* Fondo negro semitransparente */
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 20px;
     margin: 20px;
-    border-radius: 8px; /* Bordes redondeados */
-    width: 80%; /* Que ocupe el 80% del ancho */
-    max-width: 800px; /* Pero que no sea gigante en pantallas grandes */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-    border: 1px solid rgba(255, 255, 255, 0.2); /* Un borde sutil elegante */
+    border-radius: 8px;
+    width: 80%;
+    max-width: 800px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-/* Estilos extra para tus títulos */
-h3, h4, h5 {
+h3,
+h4,
+h5 {
     text-align: center;
-    color: #170fad; /* Un color dorado muy napoleónico */
+    color: #170fad;
 }
 
-ul, ol {
-    margin-left: 20px;
+ul,
+ol {
+    /* Mantiene las reglas de centrado de bloque para listas */
+    max-width: 600px;
+    margin: 10px auto;
+    text-align: left;
 }
 
+/* Reglas de centrado de columna para párrafos */
+p {
+    text-align: center;
+    /* Centraliza el texto como pediste */
+    max-width: 700px;
+    width: 90%;
+    margin: 10px auto;
+}
 
+/* Regla del email */
+.email {
+    color: red;
+}
 
 footer {
-    background-color: #000000; 
+    background-color: #000000;
     color: #ffffff;
     text-align: center;
     padding: 15px 0;
-    width: 100%; 
+    width: 100%;
     margin-top: auto;
     box-sizing: border-box;
 }
