@@ -1,4 +1,6 @@
 #dateDisplay,
+
+#dateDisplay,
 #clockDisplay {
     position: absolute;
     left: 10px;
@@ -110,17 +112,30 @@ footer p {
     margin: 0;
     }
 
-    @media (max-width: 600px) {
-        #dateDisplay {
-            top: 60px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 16px;
-        }
-        #clockDisplay {
-            top: 90px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 20px;
-        }
+    .top-bar {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 16px;
+        padding: 8px 16px 0 16px;
+        box-sizing: border-box;
+        position: relative;
+    }
+
+    #dateDisplay, #clockDisplay {
+        position: relative;
+        left: unset;
+        top: unset;
+        font-family: 'Times New Roman', Times, serif;
+        color: #333333;
+        background-color: transparent;
+        padding: 5px 8px;
+        border-radius: 4px;
+        border: none;
+        box-shadow: none;
+        z-index: 1000;
+        text-align: center;
+        font-weight: bold;
+        font-size: 16px;
     }
