@@ -108,4 +108,19 @@ footer {
 
 footer p {
     margin: 0;
-}
+    }
+
+    @media (max-width: 600px) {
+        #dateDisplay {
+            top: 60px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 16px;
+        }
+        #clockDisplay {
+            top: 90px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 20px;
+        }
+    }
