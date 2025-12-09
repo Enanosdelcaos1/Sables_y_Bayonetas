@@ -154,3 +154,21 @@ footer p {
         font-weight: bold;
         font-size: 16px;
     }
+    .ejercitos {
+        margin-top: 20px;
+        font-weight: bold;
+        font-size: 18px;
+        color : #efe9e9;
+        text-shadow: -1px -1px 0 #000,
+                     1px -1px 0 #000,
+                    -1px  1px 0 #000,
+                     1px  1px 0 #000;
+    }
+
+    .listaEjercitos {
+        max-width: 600px;
+        margin: 10px auto;
+        text-align: left;
+        font-size: 16px;
+        line-height: 1.5;
+    }
