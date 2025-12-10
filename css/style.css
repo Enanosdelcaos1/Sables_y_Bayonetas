@@ -214,15 +214,26 @@ footer p {
         font-size: 1rem;
     }
 
-    @media (max-width: 900px) and (min-width: 601px) {
+    @media (max-width: 900px) {
         body {
-            padding-left: 150px;
+            padding-left: 0;
         }
         .side-images {
-            left: 10px;
+            position: static;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            margin: 10px auto 20px;
+            width: 100%;
+            pointer-events: auto;
+        }
+        .side-image {
+            max-width: 45%;
         }
         .side-images img {
-            width: 120px;
+            width: 100%;
+            max-width: 220px;
         }
     }
 
@@ -245,7 +256,16 @@ footer p {
             max-width: 40vw;
         }
         .side-images {
-            display: none;
+            position: static;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            justify-content: flex-start;
+            gap: 10px;
+            padding: 0 8px;
+        }
+        .side-image {
+            max-width: 70%;
+            flex: 0 0 auto;
         }
     }
     #dateDisplay, #clockDisplay {
