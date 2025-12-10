@@ -49,7 +49,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('../img/sable\ y\ bayoneta\ \ 2.png');
+    background-image: url('../img/sable y bayoneta.avif');
     background-size: 90% 90%;
     background-repeat: no-repeat;
     background-position: center;
@@ -126,18 +126,126 @@ footer p {
         z-index: 1001;
     }
 
+    .side-images {
+        position: absolute;
+        top: 150px;
+        left: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        pointer-events: none;
+        z-index: 200;
+    }
+
+    .side-images img {
+        width: 180px;
+        height: auto;
+        border-radius: 8px;
+        border: 2px solid rgba(255, 255, 255, 0.5);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+        cursor: pointer;
+    }
+ .side-image {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+        pointer-events: auto;
+    }
+
+    .side-image figcaption {
+        font-size: 0.85rem;
+        color: #760f19;
+        text-align: center;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
+    }
+
+    .lightbox {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.85);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.25s ease;
+        z-index: 4000;
+    }
+
+    .lightbox.open {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .lightbox-content {
+        max-width: 90vw;
+        max-height: 80vh;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        color: #f5f5f5;
+        text-align: center;
+    }
+
+    .lightbox-content img {
+        max-width: 90vw;
+        max-height: 70vh;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+        border-radius: 10px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    }
+
+    .lightbox-caption {
+        font-size: 1rem;
+    }
+
+    .lightbox-close {
+        align-self: flex-end;
+        background: transparent;
+        border: 1px solid rgba(255, 255, 255, 0.6);
+        color: #ffffff;
+        padding: 4px 10px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 1rem;
+    }
+
+    @media (max-width: 900px) and (min-width: 601px) {
+        body {
+            padding-left: 150px;
+        }
+        .side-images {
+            left: 10px;
+        }
+        .side-images img {
+            width: 120px;
+        }
+    }
+
     @media (max-width: 600px) {
+        body {
+            padding-top: 72px;
+        }
         .top-bar {
             position: sticky;
             top: 0;
             justify-content: center;
             padding: 8px 4px 0 4px;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(6px);
             z-index: 1001;
         }
         #dateDisplay, #clockDisplay {
             font-size: 15px;
             min-width: 80px;
             max-width: 40vw;
+        }
+        .side-images {
+            display: none;
         }
     }
     #dateDisplay, #clockDisplay {
@@ -164,7 +272,12 @@ footer p {
                     -1px  1px 0 #000,
                      1px  1px 0 #000;
     }
-
+.Franceses{color : blue;}
+.Austriacos{color : white;}
+.Prusianos{color : rgb(80, 75, 75);}  
+.Rusos{color : green;}
+.Español{color : white;}
+.Britanico{color : red;}
     .listaEjercitos {
         max-width: 600px;
         margin: 10px auto;

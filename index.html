@@ -7,9 +7,19 @@
     <link rel="stylesheet" href="css/style.css
     ">
 
-</head>
+ </head>
 <body>
-    
+    <div class="side-images">
+        <div class="side-image">
+            <img src="img/despliege.avif" alt="Soldado 1">
+            <figcaption>Despliegue inicial</figcaption>
+        </div>
+        <div class="side-image">
+            <img src="img/colina.avif" alt="Soldado 2">
+            <figcaption>Bavaros intentando tomar la colina</figcaption>
+        </div>
+    </div>
+
     <div class="top-bar">
         <div id="dateDisplay"></div>
         <div id="clockDisplay"></div>
@@ -102,15 +112,13 @@
         los ejercitos enfrentados son muchos en toda Europa</p>
     <p>pero princiàlmente eran 6 </p>
     <ul class="listaEjercitos">
-        <li>franceses (los principales implicados)</li>
-        
-        <li>los Austriacos (los que mas veces se enfrentaron a los franceses)</li>
-        <li>los Prusiano ( uno de los mejores ejercitos pero demasiado pequeño para enfrentarse solo al Frances</li>
-        <li>los Rusos (un enorme ejercito pero no demasiado bueno)</li>
-
-        <li>el Español ( un ejercito en decadencia y mal entrenado pero un gran dolor de cabeza para napoleon. Fue el primero en vencer a los franceses en campo abierto)
+        <li><span class="Franceses">Franceses</span> (los principales implicados)</li>
+        <li><span class="Austriacos">Austriacos</span> (los que mas veces se enfrentaron a los franceses)</li>
+        <li><span class="Prusianos">Prusianos</span> ( uno de los mejores ejercitos pero demasiado pequeño para enfrentarse solo al Frances</li>
+        <li><span class="Rusos">Rusos</span> (un enorme ejercito pero no demasiado bueno)</li>
+        <li><span class="Español">Español</span> ( un ejercito en decadencia y mal entrenado pero un gran dolor de cabeza para napoleon. Fue el primero en vencer a los franceses en campo abierto)
         </li>
-        <li>el Britanico (pequeño y de elite pero no suficiente para enfrentarse solo a los franceses solo.)</li>
+        <li><span class="Britanico">Britanico</span> (pequeño y de elite pero no suficiente para enfrentarse solo a los franceses solo.)</li>
     </ul>
     <P> puedes elegir entre estos ejercitos para jugar hay muchos mas pero eran pequeño y muy localizadso asi como el bavaro, el sajon, el holandes o el polaco los cuales casi siempre sirvieron como aliados de uno u otro ejercito.<br>
         Estos ejercitos tienen unidades especiales que los hacen unicos y diferentes unos de otros.
@@ -132,15 +140,17 @@
         
     </section>
 
-
+    <div class="lightbox" id="imageLightbox" aria-hidden="true">
+        <div class="lightbox-content">
+            <button type="button" class="lightbox-close" aria-label="Cerrar imagen">Cerrar ✕</button>
+            <img src="" alt="" id="lightboxImage">
+            <p class="lightbox-caption" id="lightboxCaption"></p>
+        </div>
+    </div>
     <script src="js/sables.js"></script>
-</body>
-<footer> 
     <footer>
-    <p>&copy; 2025 Sables y Bayonetas. 
-               Derechos Reservados.</p>
-          <h6>imagen del fondo creada con IA geminis</h6>
-</footer>
-
-
+        <p>&copy; 2025 Sables y Bayonetas. Derechos Reservados.</p>
+        <h6>imagen del fondo creada con IA geminis</h6>
+    </footer>
+</body>
 </html>
