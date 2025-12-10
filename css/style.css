@@ -1,32 +1,15 @@
 #dateDisplay,
-
-#dateDisplay,
 #clockDisplay {
-    position: absolute;
-    left: 10px;
     font-family: 'Times New Roman', Times, serif;
-    color: #333333;
+    color: #f3ede2;
     background-color: transparent;
-    padding: 5px 8px;
+    padding: 2px 6px;
     border-radius: 4px;
     border: none;
     box-shadow: none;
-    z-index: 1000;
-    text-align: center;
-}
-
-#dateDisplay {
-    top: 10px;
-    font-size: 14px;
+    text-align: right;
     font-weight: bold;
-    letter-spacing: 1px;
-}
-
-#clockDisplay {
-    top: 40px;
-    font-size: 18px;
-    font-weight: bold;
-    color: #181625;
+    font-size: 0.95rem;
 }
 
 
@@ -111,19 +94,73 @@ footer {
 footer p {
     margin: 0;
     }
-
-    .top-bar {
+    .site-header {
+        position: sticky;
+        top: 0;
         width: 100%;
         display: flex;
-        justify-content: flex-start;
+        flex-direction: column;
+        gap: 10px;
+        padding: 12px 16px;
+        background: rgba(18, 20, 34, 0.35);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
+        z-index: 900;
+    }
+
+    .site-header h1,
+    .site-header h3 {
+        margin: 0;
+        text-align: center;
+    }
+
+    .header-main {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
         align-items: center;
+        justify-content: space-between;
         gap: 16px;
-        padding: 8px 16px 0 16px;
-        box-sizing: border-box;
-        position: relative;
-        top: unset;
-        background: transparent;
-        z-index: 1001;
+    }
+
+    .header-text {
+        flex: 1 1 240px;
+        text-align: center;
+    }
+
+    .header-meta {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+        min-width: 140px;
+        text-align: left;
+    }
+
+    .site-nav {
+        display: flex;
+        gap: 18px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .site-nav a {
+        text-transform: uppercase;
+        font-size: 0.9rem;
+        letter-spacing: 1px;
+        color: #f3ede2;
+        text-decoration: none;
+        padding: 4px 10px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 999px;
+        transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .site-nav a:hover,
+    .site-nav a:focus {
+        background: rgba(255, 255, 255, 0.2);
+        color: #fff;
     }
 
     .side-images {
@@ -239,16 +276,22 @@ footer p {
 
     @media (max-width: 600px) {
         body {
-            padding-top: 72px;
+            padding-top: 16px;
         }
-        .top-bar {
-            position: sticky;
-            top: 0;
+        .site-header {
+            padding: 10px 12px;
+        }
+        .header-main {
+            flex-direction: column;
+            align-items: center;
+        }
+        .header-meta {
+            align-items: center;
+        }
+        .site-nav {
+            flex-wrap: wrap;
             justify-content: center;
-            padding: 8px 4px 0 4px;
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(6px);
-            z-index: 1001;
+            gap: 10px;
         }
         #dateDisplay, #clockDisplay {
             font-size: 15px;
@@ -267,20 +310,6 @@ footer p {
             max-width: 70%;
             flex: 0 0 auto;
         }
-    }
-    #dateDisplay, #clockDisplay {
-        position: static;
-        font-family: 'Times New Roman', Times, serif;
-        color: #333333;
-        background-color: transparent;
-        padding: 5px 8px;
-        border-radius: 4px;
-        border: none;
-        box-shadow: none;
-        z-index: 1000;
-        text-align: center;
-        font-weight: bold;
-        font-size: 16px;
     }
     .ejercitos {
         margin-top: 20px;
